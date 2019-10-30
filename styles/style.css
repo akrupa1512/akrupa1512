@@ -14,28 +14,34 @@ body, html {
     background-color: rgba(0,0,0,.05);
 }
 
-#header {
+.header {
     background-color: rgb(139, 216, 255);
     height: 350px;
     border-bottom: 1px rgb(160, 240, 255) solid;
 }
 
-#main {
-    display: flex;
-    flex-direction: column;
+.main {
     height: 100%;
-    padding: 0px 250px;
+    padding: 0 250px;
     margin-top: -300px;
 }
 
-.name-networks {
+.body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.main-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-#name {
+.name {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     display: flex;
@@ -43,24 +49,24 @@ body, html {
     align-items: center;
 }
 
-#name>h1 {
+.name>h1 {
     font-size: 30px;
     text-transform: capitalize;
 }
 
-#name>h3 {
+.name>h3 {
     font-size: 20px;
     text-transform: capitalize;
 }
 
-#networks {
+.networks {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-#networks>a {
+.networks>a {
     width: 32px;
     height: 32px;
     border-radius: 100%;
@@ -72,100 +78,107 @@ body, html {
     margin-right: 6px;
 }
 
-#networks>a>img {
+.networks>a>img {
     width: 16px;
     height: 16px;
 }
 
-#networks>a:hover {
-    box-shadow: 0px 1px 2px black;
+.networks>a:hover {
+    box-shadow: 0 1px 2px black;
 }
 
-#networks>a:active {
-    box-shadow: 0px 1px 0px black;
+.networks>a:active {
+    box-shadow: 0 1px 0 black;
 }
 
-#card-info {
-    margin-top: 100px;
+.box {
     width: 100%;
-    height: 275px;
     background-color: white;
     display: flex;
     flex-direction: row;
     box-shadow: 5px 5px 25px;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
-#photo {
+.card-info {
+    margin-top: 100px;
+    height: 275px;
+}
+
+.photo-wrapper {
+    flex: 0 200px;
+}
+
+.photo-wrapper>div {
+    width: 100%;
+    height: 100%;
     background-image: url("../assets/images/photo.JPG");
     background-position: center;
     background-size: cover;
-    height: 100%;
-    width: 300px;
+    background-repeat: no-repeat;
 }
 
-#info {
+.info {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
+    flex: 1;
 }
 
-#about-1 {
+.about {
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    border-bottom: 1px rgba(0,0,0,0.3) solid;
     display: flex;
     flex-direction: column;
 }
 
-#about-1>span {
+.about-1 {
+    border-bottom: 1px rgba(0,0,0,0.3) solid;
+}
+
+.about-1>span {
     margin-bottom: 5px;
     font-family: 'Montserrat', sans-serif;
 }
 
-#title {
+.greeting {
     font-weight: 700;
     font-size: 32px;
     text-transform: uppercase;
 }
 
-#title>span {
+.greeting>span {
     color: rgb(139, 216, 255);
 }
 
-#about-2 {
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    display: flex;
-    flex-direction: column;
+.about-2 {
     justify-content: flex-start;
     align-items: flex-start;
 }
 
-#short-info {
+.short-info {
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
 }
 
-#short-info>tbody>tr {
+.short-info>tbody>tr {
     table-layout: fixed;
     height: 20px;
 }
 
-#short-info>tbody>tr>th {
+.short-info>tbody>tr>th {
     text-align: left;
 }
 
 
-#short-info>tbody>tr>th>a {
+.short-info>tbody>tr>th>a {
     text-decoration: none;
     color: black;
     transition: color 1s ease;
 }
 
-#short-info>tbody>tr>th>a:hover {
+.short-info>tbody>tr>th>a:hover {
     color: rgb(139, 216, 255);
 }
 
@@ -173,14 +186,6 @@ body, html {
     font-weight: bold;
     table-layout: fixed;
     width: 75px;
-}
-
-#links {
-    width: 100%;
-    height: 48px;
-    background-color: rgb(139, 216, 255);
-    align-self: flex-end;
-    margin-top: auto;
 }
 
 .title {
@@ -194,17 +199,12 @@ body, html {
     margin-bottom: 30px;
 }
 
-#skills-info {
-    width: 100%;
-    background-color: white;
-    display: flex;
-    flex-direction: row;
+.skills-info {
     flex-wrap: wrap;
-    box-shadow: 5px 5px 25px;
     justify-content: center;
 }
 
-#skills-info>img {
+.skills-info>img {
     max-width: 64px;
     max-height: 64px;
     margin: 15px;
@@ -212,28 +212,23 @@ body, html {
     transition: all 0.25s linear;
 }
 
-#skills-info>img:hover {
+.skills-info>img:hover {
     filter: grayscale(0);
 }
 
-#education {
-    width: 100%;
-    background-color: white;
-    display: flex;
+.education {
     flex-direction: column;
-    box-shadow: 5px 5px 25px;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
 }
 
-#education>a>img {
-    width: 64px;
+.education>a>img {
     height: 64px;
     margin-top: 20px;
 }
 
-#education>span {
+.education>span {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 24px;
@@ -245,40 +240,40 @@ body, html {
 
 @media (max-width: 1064px)
 {
-    #main {
-        padding: 0px 50px;
+    .main {
+        padding: 0 50px;
     }
 
-    .name-networks {
+    .main-header {
         flex-direction: column;
     }
 
-    #name {
+    .name {
         margin-bottom: 20px;
     }
 
-    #card-info{
+    .card-info{
         margin-top: 50px;
     }
 
-    #title {
+    .greeting {
         font-size: 18px;
     }
 
-    #description {
+    .description {
         font-size: 12px;
     }
 
-    #short-info {
+    .short-info {
         font-size: 12px;
     }
 
-    #skills-info>img {
+    .skills-info>img {
         filter: grayscale(0);
         margin: 10px;
     }
 
-    #education>span {
+    .education>span {
         font-size: 22px;
     }
 }
